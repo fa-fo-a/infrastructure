@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build -f Dockerfile_php_base -t achertovsky/php-project1-base:latest ../
+docker push achertovsky/php-project1-base:latest
