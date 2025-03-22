@@ -1,0 +1,4 @@
+FROM achertovsky/php-project1-base:latest
+
+RUN pecl install openswoole-25.2.0
+RUN docker-php-ext-enable openswoole
