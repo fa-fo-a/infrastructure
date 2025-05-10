@@ -28,5 +28,3 @@ RUN apt install -y \
     xq \
     wget \
     git
-
-CMD ["php", "-r", "while (true) { sleep(3600); }"]
