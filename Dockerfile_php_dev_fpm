@@ -1,4 +1,4 @@
-FROM achertovsky/php-infrastructure:base
+FROM achertovsky/php-infrastructure:base_fpm
 
 ARG USER_ID=1000
 
