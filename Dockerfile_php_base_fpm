@@ -1,18 +1,4 @@
-FROM php:8.4-fpm
-
-RUN apt update && apt install -y \
-    libicu-dev \
-    libzip-dev \
-    unzip \
-    curl \
-    default-mysql-client \
-    libjudy-dev
-
-RUN docker-php-ext-install \
-    intl \
-    pdo \
-    pdo_mysql \
-    zip
+FROM achertovsky/php-infrastructure:base
 
 RUN docker-php-ext-enable opcache
 
