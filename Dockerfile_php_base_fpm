@@ -1,3 +1,9 @@
 FROM achertovsky/php-infrastructure:base
 
+COPY --from=php:8.5-fpm /usr/local/sbin/php-fpm /usr/local/sbin/php-fpm
+COPY --from=php:8.5-fpm /usr/local/etc/php-fpm.d /usr/local/etc/php-fpm.d
+COPY --from=php:8.5-fpm /usr/local/etc/php-fpm.conf /usr/local/etc/php-fpm.conf
+
 WORKDIR /var/www/html
+
+CMD ["/usr/local/sbin/php-fpm"]
